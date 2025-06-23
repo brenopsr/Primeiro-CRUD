@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>3up App • Sistema de Ponto Eletrônico</title>
+  <style>
+    /* Fundo com gradiente animado */
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(270deg, #0f0c29, #302b63, #24243e);
+      background-size: 600% 600%;
+      animation: gradientBG 12s ease infinite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Neon glow para o título */
+    h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      position: relative;
+      color: #00e6e6;
+      animation: glow 1.5s ease-in-out infinite alternate;
+      margin: 0;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow:
+          0 0 5px #00e6e6,
+          0 0 10px #00e6e6,
+          0 0 20px #00ffff,
+          0 0 30px #00ffff;
+      }
+      to {
+        text-shadow:
+          0 0 10px #00e6e6,
+          0 0 20px #00e6e6,
+          0 0 30px #00ffff,
+          0 0 40px #00ffff;
+      }
+    }
+
+    /* Subtítulo com animação de fade-in */
+    p {
+      font-size: 1.5rem;
+      margin-top: 0.5em;
+      color: #cce7ff;
+      opacity: 0;
+      animation: fadeIn 3s forwards 1s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Efeito de botão futurista */
+    .cta {
+      margin-top: 2em;
+      padding: 0.8em 2em;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #fff;
+      background: transparent;
+      border: 2px solid #00e6e6;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 230, 230, 0.2);
+      transform: skewX(-25deg);
+      transition: all 0.5s ease;
+    }
+
+    .cta:hover {
+      background: #00e6e6;
+      color: #24243e;
+    }
+
+    .cta:hover::before {
+      left: 200%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>3up App</h1>
+  <p>Sistema de Ponto Eletrônico</p>
+  <button class="cta">Iniciar Agora</button>
+
+</body>
+</html>
