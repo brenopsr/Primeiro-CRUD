@@ -8,11 +8,12 @@ Este repositório contém uma pequena API criada com **Django** e **Django REST 
    ```bash
    pip install -r requirements.txt
    ```
-2. Aplique as migrações:
+2. Acesse a pasta `triup` e aplique as migrações:
    ```bash
+   cd triup
    python manage.py migrate
    ```
-3. Rode a aplicação:
+3. Ainda dentro da pasta `triup`, rode a aplicação:
    ```bash
    python manage.py runserver
    ```
